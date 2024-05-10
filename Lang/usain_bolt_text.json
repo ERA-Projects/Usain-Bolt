@@ -1,0 +1,6 @@
+{
+	"usb": {
+		"hint": "{~Yellow}Usain Bolt! @heroName@ will move each turn @bonus@ extra tiles.{~}\n{~Yellow}(Read @heroName@'s biography for details){~}",
+		"msg": "\n{~Yellow}Usain Bolt settings:\n@usainValue@ tiles bonus every @boltValue@ victorious battles.{~}\n\n{~Cyan}@heroName@ rank:\n\n{~Cyan}@battlesWon@ battles won, can move @bonus@ extra tiles.\n{~Chartreuse}@battlesLeft@ more battles until level up.{~}"
+	}
+}

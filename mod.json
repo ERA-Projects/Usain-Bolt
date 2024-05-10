@@ -1,0 +1,37 @@
+{
+	"caption": {
+		"Cn_Simp": "",
+		"en_US": "Usain Bolt",
+		"ru_RU": ""
+	},
+	"description": {
+		"full": {
+			"Cn_Simp": "",
+			"en_US": "Readme.txt",
+			"ru_RU": ""
+		},
+		"short": {
+			"Cn_Simp": "",
+			"en_US": "",
+			"ru_RU": ""
+		}
+	},
+	"author": "valery",
+	"homepage": "",
+	"icon": {
+		"file": "Bolt.ico",
+		"index": 0
+	},
+	"mod_version": "1.1",
+	"priority": 0,
+	"compatibility": {
+		"class": "default",
+		"entries": {
+			"WoG": true
+		}
+	},
+	"platform": "era",
+	"info_version": "1.0",
+	"plugins": {},
+	"category": "gameplay"
+}

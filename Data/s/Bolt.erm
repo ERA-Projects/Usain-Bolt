@@ -1,0 +1,66 @@
+ZVSE2
+
+;Usain Bolt mod
+;Author: Valery
+;18.08.2014
+;Human player heroes get a movement bonus from battle victories
+;uses w129, w130
+
+!?FU(OnAfterErmInstructions);
+!!FU(ReadIniInts):P^Usain.ini^/^Player settings^/^Mvm_Bonus^/?i^Usain_value^/10;
+!!VRi^Usain_value^:*100;
+!!FU(ReadIniInts):P^Usain.ini^/^Player settings^/^Battles_Counter^/?i^Bolt_value^/50;
+
+!!re i/0/155;
+  !!IF:Wi;
+  !!VRw129:S0;
+  !!VRw130:S0;
+!!en;
+
+!?FU(OnEveryDay)&i^timerIsAi^=(FALSE);
+
+!!re i/0/155;
+  !!HEi:O?y1;
+
+  !!if&y1=i^timerOwner^;
+    !!IF:Wi;
+    !!VR(bonus:y):Sw129 :i^Bolt_value^ *i^Usain_value^;
+    !!HEi:Wd(bonus) Gd(bonus);
+  !!en;
+!!en;
+
+!?BA1&1000;
+!!HE-1:O?y1 N?y2 B0/?(heroName:z);
+!!FU&y1<0:E;  hero alive/dead
+!!IF:W-1; read w vars
+!!VRw129:+1; total battles counter
+!!SN:W^Bolt_value^/?y3;  how many battles required
+!!VRw130&w130<y3:+1;
+!!if&w130=y3:;
+  !!VRz3:S^Playcome.wav^;
+  !!SN:Pz3;  play sound
+  !!SN:W^Usain_value^/?y4; how much will move bonus
+  !!VRy5:Sw129 :y3 *y4 :100;
+  !!SN:T^usb.hint^/?(hint:z)/^heroName^/(heroName)/^bonus^/y5;
+  !!IF:L^%(hint)^;
+  !!VRw130:S0;
+!!en:;
+
+
+!?CM2; biography details
+!!CM:I?y1;
+!!FU&y1<>45:E;
+!!HE-1:B0/?z5;
+!!IF:W-1;
+!!SN:W^Usain_value^/?y4; how much will move bonus
+!!SN:W^Bolt_value^/?y3;  how many battles required
+!!VRy5:Sw129 :y3 *y4 :100;
+!!VRy98:Sy3-w130;
+!!VRy4::100;
+!!VRz2:S^^;
+!!UN:A98/9/z2;
+!!SN:T^usb.msg^/?(msg:z)/^heroName^/(heroName)/^bonus^/y5/^usainValue^/y4/^boltValue^/y3/^battlesWon^/w129/^battlesLeft^/y98;
+
+!!IF:Q1/8/98/8/98/8/98/4/(msg:z);
+!!UN:A98/9/0; restore original name
+!!CM:R0;
