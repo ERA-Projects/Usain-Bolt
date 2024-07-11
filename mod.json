@@ -2,12 +2,12 @@
 	"caption": {
 		"Cn_Simp": "",
 		"en_US": "Usain Bolt",
-		"ru_RU": ""
+		"ru_RU": "Усэйн Болт"
 	},
 	"description": {
 		"full": {
-			"Cn_Simp": "",
-			"en_US": "readme.txt",
+			"Cn_Simp": "readme_rus.md",
+			"en_US": "readme.md",
 			"ru_RU": ""
 		},
 		"short": {
