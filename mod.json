@@ -6,9 +6,9 @@
 	},
 	"description": {
 		"full": {
-			"Cn_Simp": "readme_rus.md",
+			"Cn_Simp": "",
 			"en_US": "readme.md",
-			"ru_RU": ""
+			"ru_RU": "readme_rus.md"
 		},
 		"short": {
 			"Cn_Simp": "",
