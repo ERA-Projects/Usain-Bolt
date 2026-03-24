@@ -1,0 +1,6 @@
+{
+    "usb": {
+        "hint": "{~Yellow}尤塞恩·博尔特！@heroName@ 每回合将额外获得 @bonus@ 格移动力。{~}\n{~Yellow}(详情请参阅 @heroName@ 的英雄传记){~}",
+        "msg": "\n{~Yellow}“百米飞人”设定：\n每获得 @boltValue@ 场战斗胜利，将永久增加 @usainValue@ 格移动力奖励。{~}\n\n{~Cyan}@heroName@ 当前等级：\n\n{~Cyan}已获胜 @battlesWon@ 场，当前额外移动力：@bonus@ 格。\n{~Chartreuse}距离下次升级还需赢得 @battlesLeft@ 场战斗。{~}"
+    }
+}
